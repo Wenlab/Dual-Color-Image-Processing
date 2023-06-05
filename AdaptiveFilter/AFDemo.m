@@ -11,7 +11,7 @@ clear;
 
 %% 0. load a 3D image stack for visualization
 
-load('Fish-0107-sample.mat');
+load('Fish-0107-sample2.mat');
 
   
 %% 1. Plot the comparison between dual-Ratio and the AF result
@@ -32,7 +32,7 @@ extend_factor = 0.05;
 
 
     subplot(2,2,[3 4]);
-    plot(AF./mean(sigG),'Color',[0.9290 0.6940 0.1250 0.8], 'LineWidth', 2);
+    plot(AF,'Color',[0.9290 0.6940 0.1250 0.8], 'LineWidth', 2);
     hold on;
     plot(dualRatio(sigG, sigR),'Color',[85/256 170/256 173/256 0.8],'lineWidth',2);
         xlim([0 1500]);  

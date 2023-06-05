@@ -23,7 +23,7 @@ end
      x(i)=x(i) * factor;
      end
   end
-
+x(x<0)=0;
 
 end
 
