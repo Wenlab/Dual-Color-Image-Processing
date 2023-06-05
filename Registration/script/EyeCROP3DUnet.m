@@ -50,9 +50,9 @@ options = trainingOptions("adam", ...
 % 
 % Training finished: Max epochs completed.
 
-%% Test the net
+%% Test the net.
 
-% read a .nii file
+% read a nifti (.nii) file
 img = niftiread('./ds/Red_1stAffined_221.nii');
 img = uint8(img);
 % downsample
