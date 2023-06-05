@@ -130,7 +130,7 @@ thresh_Coherence = 0.5;
 
 % if save the water_corMap_filter.
 write_flag = 1;
-[seg_regions,water_corMap_filter] = coherenceFilter(Coherence,water_corMap,min_size,thresh_Coherence,write_flag);
+[seg_regions,water_corMap_filter] = coherenceFilter(file_path,Coherence,water_corMap,min_size,thresh_Coherence,write_flag);
 disp('water_corMap_filter done.');
 
 %% extract Calcium traces again.

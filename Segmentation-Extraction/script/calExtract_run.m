@@ -1,9 +1,5 @@
 %% Segment brain regions using Correlation Map method and extract the calcium trace.
 
-% Set environment.
-cd ../;
-adpath;
-
 % set path.
 file_path_green = 'data/G/regist_green_mat_3';
 file_path_red = 'data/R/regist_red_mat_3';

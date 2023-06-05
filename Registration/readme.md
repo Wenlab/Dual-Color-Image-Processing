@@ -10,9 +10,9 @@ For Registration, do this in the following order under script path:
 
 5. interp_run.m
 
-Or run the pepline_demo.sh under script path.
+Or run the pepeline_demo.sh under script path.
 
-bash pepline_demo.sh
+bash pepeline_demo.sh
 
 Then you will get some directories under data/G/regist_green and data/R/regist_red.
 
