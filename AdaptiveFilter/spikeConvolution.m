@@ -5,11 +5,9 @@ function convolved = spikeConvolution(spike, Kernel)
 
 L = length(spike);
 
-positiveSpike = max(spike,0);
-positivecConvolved = conv(positiveSpike, Kernel);
+positivecConvolved = conv(spike, Kernel);
 positivecConvolved = positivecConvolved(1:L);
 
-% only remains positive ones
 
 convolved = positivecConvolved;
 

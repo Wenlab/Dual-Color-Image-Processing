@@ -13,22 +13,15 @@ clear;
 
 load('Fish-0107-sample.mat');
 
-%% 1. Preprocessing two channel signals 
-
-% sigG = GFP channel signal
-% sigR = LSSmCrimson channel signal
-
-[nsigR, nsigG] = dualPreprocessNoMapping(sigR, sigG);
-
   
-%% 2. Plot the comparison between dual-Ratio and the AF result
+%% 1. Plot the comparison between dual-Ratio and the AF result
 
 % call the NLMS algorithm
 % Adaptive Filter need a period time steps to converge, 
 % extend factor is the ratio of total signal length
 
 extend_factor = 0.05; 
-[AF, ~, ~] = useNLMS(nsigR,nsigG,extend_factor);
+[AF, ~, ~] = useNLMS(sigR,sigG,extend_factor);
 
 
 % plot the AF result compare with conventional ratio method
@@ -39,7 +32,7 @@ extend_factor = 0.05;
 
 
     subplot(2,2,[3 4]);
-    plot(AF./mean(nsigG),'Color',[0.9290 0.6940 0.1250 0.8], 'LineWidth', 2);
+    plot(AF./mean(sigG),'Color',[0.9290 0.6940 0.1250 0.8], 'LineWidth', 2);
     hold on;
     plot(dualRatio(sigG, sigR),'Color',[85/256 170/256 173/256 0.8],'lineWidth',2);
         xlim([0 1500]);  
@@ -67,7 +60,7 @@ extend_factor = 0.05;
         xlim([0 1500]) 
         set(gca,'looseInset',[0 0 0 0]);
 
- %% 3. Add Synthetic AR(1) Signals to EGFP
+ %% 2. Add Synthetic AR(1) Signals to EGFP
 
  % AR(1) constant lambda
 
@@ -93,29 +86,24 @@ extend_factor = 0.05;
 % a is the final artificial synthetic signal 
 a = a * amp;
 
-smoothSigG = waveletDenoise(sigG);
 
 % follow the fomula and construct psudo synthetic signal
 pseudoSig = (a+1).*sigG;
 
-%% 4. Preprocess the synthetic signal 'pseudoSig' and LSSmCrimson Signal 'sigR'
-[nsigR, nsigG] = dualPreprocessNoMapping(sigR, pseudoSig);
-
-
-%% 5. Plot the comparison
+%% 3. Plot the comparison
 figure(2);
 
 % call the NLMS algorithm
-[AF, ~, ~] = useNLMS(nsigR,nsigG,extend_factor);
+[AF, ~, ~] = useNLMS(sigR,pseudoSig,extend_factor);
 
 % plot the comperison
     set(gcf,'position',[0,0,420,350]);
     subplot(2,2,[3 4]);
     plot(a, 'color',[0.4940 0.1840 0.5566],'LineWidth', 2);
     hold on;
-    plot(dualRatio(nsigG, nsigR),'Color',[85/256 170/256 173/256 0.8],'lineWidth',2);
+    plot(dualRatio(sigG, sigR),'Color',[85/256 170/256 173/256 0.8],'lineWidth',2);
     hold on;
-    plot(AF./mean(sigG),'LineWidth', 2,'Color',[0.9290 0.6940 0.1250,0.7]);
+    plot(AF,'LineWidth', 2,'Color',[0.9290 0.6940 0.1250,0.7]);
         ylabel('Inferred Intensity','Fontname','Arial','FontSize',14);
         xlabel('Time (s)','Fontname','Arial','FontSize',14)
         set(gca,'XTickLabel',0:50:150);
