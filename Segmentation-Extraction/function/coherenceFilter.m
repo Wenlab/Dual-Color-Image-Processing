@@ -1,7 +1,8 @@
-function [seg_regions,water_corMap_filter] = coherenceFilter(Coherence,water_corMap,min_size,thresh_Coherence,write_flag)
+function [seg_regions,water_corMap_filter] = coherenceFilter(file_path,Coherence,water_corMap,min_size,thresh_Coherence,write_flag)
 %% function summary: Filter regions according to Coherence threshold.
 
 %  input:
+%   file_path --- the mat format image directory path.
 %   Coherence --- the coherence of segmented regions.
 %   water_corMap --- the segmented regions map.
 %   min_size --- the minimum size of segmented regions. 
