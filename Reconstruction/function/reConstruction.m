@@ -1,3 +1,4 @@
+function reConstruction(file_path_red,file_path_green,red_PSF,green_PSF,atlas,crop_size,start_frame,step_size,end_frame,tform,gpu_index)
 %% function summary: reconstruct frames.
 
 %  input:
@@ -9,9 +10,6 @@
 %   gpu_index --- the gpu id. For multi-GPUs, use a vector.  
 
 %  update on 2023.01.06.
-
-function reConstruction(file_path_red,file_path_green,red_PSF,green_PSF,atlas,crop_size,start_frame,step_size,end_frame,tform,gpu_index)
-
 
 %% Initialize the parameters.
     if nargin == 10

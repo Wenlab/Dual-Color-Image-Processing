@@ -1,3 +1,4 @@
+function ObjRecon = reConstruct(imstack,PSF,red_flag)
 %% function summary: reconstruct a frame using RLD.
 
 %  input:
@@ -9,9 +10,6 @@
 %   ObjRecon --- the mat format of reconstructed image.
 
 %  update on 2023.01.06.
-
-
-function ObjRecon = reConstruct(imstack,PSF,red_flag)
 
 %% Basic parameters.
     ItN=27;

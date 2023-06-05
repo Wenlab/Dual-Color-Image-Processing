@@ -1,3 +1,4 @@
+function dualCrop(red_ObjRecon,green_ObjRecon,file_path_red,file_path_green,num,atlas,crop_size)
 %% function summary: Crop the black background and rotate the two ObjRecons. 
 
 %  input:
@@ -15,9 +16,6 @@
 %   dual_MIPs --- contain the maximum intensity projections in three directions of the images in dual_Crop.
 
 %   update 2022.11.30.
-
-function dualCrop(red_ObjRecon,green_ObjRecon,file_path_red,file_path_green,num,atlas,crop_size)
-
 
 %% Make derectories.
     % red directory.

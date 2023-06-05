@@ -1,4 +1,5 @@
-%% function summary: Average the selected templates to generate the mean template.
+function templateMean(file_path,num_index,false_num,mode)
+%% function summary: Average the all templates to generate the mean template.
 
 %  input:
 %   file_path --- the directory path of templates.
@@ -10,10 +11,6 @@
 %   mean_template --- the average template over all templates except false_num templates.
 
 %   update on 2023.2.28.
-
-
-function templateMean(file_path,num_index,false_num,mode)
-
 
 %% Run.
     % For nii format.

@@ -1,4 +1,5 @@
-  %% function summary: interp bad image using linear interpolation.
+function interp_bad(file_path,pre_name,index_pre,index_post,red_flag)
+    %% function summary: interp bad image using linear interpolation.
     
     %  input:
     %   file_path --- the directory path of data.
@@ -9,13 +10,8 @@
     
     %  write: This function will overwrite the bad frame and the original frame
     %  will be add bp labels, but the original MIP will not be save.
-
-    % Note, bad image number should be manually input temporaly.
     
     % Update on 2023.03.06
-
-function interp_bad(file_path,pre_name,index_pre,index_post,red_flag)
-  
     
     %% Run.
         index_pre_name = [pre_name,num2str(index_pre),'.mat'];

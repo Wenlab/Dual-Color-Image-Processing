@@ -1,3 +1,4 @@
+function demonRegist(file_path_red,file_path_green,start_frame,step_size,end_frame,num_index,template_path,gpu_index)
 %% function summary: muti thread regist the fish image using demons method.
 
 %  input:
@@ -12,9 +13,6 @@
 %   red/green_demons_MIPs --- contain the maximum intensity projections in three directions of the demon registed images.
 
 %   Update on 2022.12.03.
-
-function demonRegist(file_path_red,file_path_green,start_frame,step_size,end_frame,num_index,template_path,gpu_index)
-
     
 %% Run.
     % Initialize the parameters.

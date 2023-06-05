@@ -1,4 +1,5 @@
-%% function summary: muti thread non-registration the fish image using demons method.
+function registDemons(file_path_red,file_path_green,start_frame,step_size,end_frame,num_index,refer_image)
+%% function summary: muti thread regist the fish image using demons method.
 
 %  input:
 %   file_path_red/green --- the nii format image directory path of affine registed red/green images.
@@ -11,9 +12,6 @@
 %   red/green_demons_MIPs --- contain the maximum intensity projections in three directions of the demon registed images.
 
 %   Update on 2022.12.02.
-
-function registDemons(file_path_red,file_path_green,start_frame,step_size,end_frame,num_index,refer_image)
-
 
 %% Run.
     for ii = start_frame:step_size:end_frame

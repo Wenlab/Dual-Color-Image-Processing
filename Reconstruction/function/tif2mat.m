@@ -1,3 +1,4 @@
+function  imstack = tif2mat(file_path)
 %% function summary: read the tif file.
 
 %  input:
@@ -8,9 +9,6 @@
 
 %  update on 2023.01.06.
 
-function  imstack = tif2mat(file_path)
-
-% set background value, which depending on the real image quality.
 Bkg = 0;
 disp('loading...');
 
