@@ -1,26 +1,30 @@
+# Registration Process
 
-For Registration, do this in the following order under script path:
+Please follow the procedure outlined below to complete the registration process. The steps should be followed in the given order.
 
-1. regist_atlas.sh
+## Execution Scripts
 
-2. template_run.m
+1. `regist_atlas.sh`
+2. `template_run.m`
+3. `regist_mean.sh`
+4. `demonsRegist_run.m`
+5. `interp_run.m`
 
-3. regist_mean.sh
+These scripts are located under the `script` path.
 
-4. demonsRegist_run.m
+Alternatively, you can run the `pipeline_demo.sh` script located under the same `script` path.
 
-5. interp_run.m
-
-Or run the pipeline_demo.sh under script path.
-
+```bash
 bash pipeline_demo.sh
+```
 
-Then you will get some directories under data/G/regist_green and data/R/regist_red.
+## Output Directories
 
-1. red/green_crop --- contain eyes cropped red/green image in mat format.
+After executing the above scripts, you will find several directories under `data/G/regist_green` and `data/R/regist_red`. These directories will contain the following:
 
-2. red/green_crop_MIPs --- contain the maximum intensity projections in three directions of the eyes cropped images.
+- `red/green_crop` - This directory contains eyes cropped red/green image in `.mat` format.
+- `red/green_crop_MIPs` - This directory contains the maximum intensity projections in three directions of the eyes cropped images.
+- `red/green_demons` - This directory contains demon registered red/green images in `.mat` format.
+- `red/green_demons_MIPs` - This directory contains the maximum intensity projections in three directions of the demon registered images.
 
-3. red/green_demons --- contain demon registed red/green images in mat format.
-
-4. red/green_demons_MIPs --- contain the maximum intensity projections in three directions of the demon registed images.
+Please ensure to follow the steps correctly to avoid any issues during the registration process.
