@@ -3,8 +3,8 @@
 %% Segment brain regions using Correlation Map method and extract the calcium trace.
 
 % set path.
-file_path_green = 'data/G/regist_green/green_demons/';
-file_path_red = 'data/R/regist_red/red_demons/';
+file_path_green = '../data/G/regist_green/green_demons/';
+file_path_red = '../data/R/regist_red/red_demons/';
 
 % set the prefix name and value name of images.
 pre_name_green = 'demons_green_3_';

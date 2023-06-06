@@ -7,7 +7,7 @@ cd ../;
 adpath;
 
 % set the directory path of template images.
-file_path_template = "data/R/template";
+file_path_template = "../data/R/template";
 
 % extract the name number of template images.
 tif_struct = dir(fullfile(file_path_template,'template*.nii'));

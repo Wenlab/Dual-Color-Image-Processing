@@ -4,21 +4,21 @@
 
 % Directory path of the tif multi-view light field images.
 % Note: in the demo, the name of the images is like '00000001.tif'.
-file_Path_Red = 'data/R/';
-file_Path_Green = 'data/G/';
+file_Path_Red = '../data/R/';
+file_Path_Green = '../data/G/';
 
 % Point spread function.
-PSF_path_red = 'data/PSF/PSF_R.mat';
-PSF_path_green = 'data/PSF/PSF_G.mat';
+PSF_path_red = '../data/PSF/PSF_R.mat';
+PSF_path_green = '../data/PSF/PSF_G.mat';
 red_PSF = load(PSF_path_red).PSF_1;
 green_PSF = load(PSF_path_green).PSF_1;
 
 % Atlas.
-atlas_path = 'data/Atlas/Ref-zbb1.nii';
+atlas_path = '../data/Atlas/Ref-zbb1.nii';
 atlas = niftiread(atlas_path);
 
 % Affine transform between the green and the red.
-load('data/Transform/Affine_G2R.mat','tform');
+load('../data/Transform/Affine_G2R.mat','tform');
 
 % set the output size which was cropped.
 crop_size = [308,400,210];

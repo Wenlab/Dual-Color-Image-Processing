@@ -7,8 +7,8 @@ cd ../;
 adpath;
 
 % set the red and green directory path of affine registed images.
-file_path_red = 'data/R/regist_red';
-file_path_green = 'data/G/regist_green';
+file_path_red = '../data/R/regist_red';
+file_path_green = '../data/G/regist_green';
 file_path_template = fullfile(file_path_red,'red_demons');
 
 % extract the name number of affine registed images.
@@ -29,7 +29,7 @@ false_num = [];
 start_num = 1;
 end_num = length(dir(fullfile(file_path_red,'regist_red_1_*.nii')));
 
-unet_path = 'data/Unet/Unet.mat';
+unet_path = '../data/Unet/Unet.mat';
 % mask_path = 'data/Mask/Mask.mat';
 
 % for Unet method, it will auto select gpu or cpu. If have gpu, the thread_num must be setted as the number of gpus.
@@ -41,7 +41,7 @@ thread_num = 4;
 % thread_num = 28;
 
 % for atlas template.
-template_path_1 = 'data/Atlas/Ref-zbb2.nii';
+template_path_1 = '../data/Atlas/Ref-zbb2.nii';
 step_size_1 = 1; %(recommend 100)
 
 % for mean template.

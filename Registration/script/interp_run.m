@@ -7,8 +7,8 @@ cd ../;
 adpath;
 
 % Set path.
-file_path_green = 'data/G/regist_green/green_demons';
-file_path_red = 'data/R/regist_red/red_demons';
+file_path_green = '../data/G/regist_green/green_demons';
+file_path_red = '../data/R/regist_red/red_demons';
 
 % Set prefix name of image.
 pre_name_red = 'demons_red_3_';

@@ -4,17 +4,17 @@
 export CMTK_WRITE_UNCOMPRESSED=1
 
 # Set the red and green chanel image directory path that is needed to register.
-red_path="../data/R/dual_Crop"
-green_path="../data/G/dual_Crop"
+red_path="../../data/R/dual_Crop"
+green_path="../../data/G/dual_Crop"
 
 # Set the output green chanel image directory path that is registered.
-regist_red_path="../data/R/regist_red"
+regist_red_path="../../data/R/regist_red"
 mkdir $regist_red_path
-regist_green_path="../data/G/regist_green"
+regist_green_path="../../data/G/regist_green"
 mkdir $regist_green_path
 
 # Set the mean template path.
-mean_template="../data/R/template/mean_template.nii"
+mean_template="../../data/R/template/mean_template.nii"
 
 # Read the images.
 file_name=$(ls $red_path/Red*.nii);

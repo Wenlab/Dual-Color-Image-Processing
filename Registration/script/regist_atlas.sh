@@ -4,14 +4,14 @@
 export CMTK_WRITE_UNCOMPRESSED=1
 
 # Set the red chanel image directory path that is needed to register.
-red_path="../data/R/dual_Crop"
+red_path="../../data/R/dual_Crop"
 
 # Set the output red chanel image directory path that is registered.
-regist_red_path="../data/R/template"
+regist_red_path="../../data/R/template"
 mkdir $regist_red_path
 
 # Set the atlas path.
-zbbfish="../data/Atlas/Ref-zbb1.nii"
+zbbfish="../../data/Atlas/Ref-zbb1.nii"
 
 # Read the red images.
 file_name=$(ls $red_path/Red*.nii);
