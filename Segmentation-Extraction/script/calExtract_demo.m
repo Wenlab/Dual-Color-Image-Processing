@@ -27,6 +27,8 @@ end_frame = 8120;
 % extract the green trace.
 [Cal_G,Coherence_G,seg_regions,water_corMap_filter,info_data] = corMap(file_path_green,pre_name_green,value_name_green,start_frame,end_frame,ad_dist,thresh,min_size);
 disp('Green trace done.');
+
+% extract the red trace.
 batch_size = 1;
 write_flag = 1;
 [Cal_R,Coherence_R] = traceExtract(file_path_red,pre_name_red,value_name_red,seg_regions,water_corMap_filter,info_data,start_frame,batch_size,end_frame,write_flag);

@@ -24,7 +24,16 @@ After executing the above scripts, you will find several directories under `data
 
 - `red/green_crop` - This directory contains eyes cropped red/green image in `.mat` format.
 - `red/green_crop_MIPs` - This directory contains the maximum intensity projections in three directions of the eyes cropped images.
-- `red/green_demons` - This directory contains demon registered red/green images in `.mat` format.
-- `red/green_demons_MIPs` - This directory contains the maximum intensity projections in three directions of the demon registered images.
+- `red/green_demons` - This directory contains demons registered red/green images in `.mat` format.
+- `red/green_demons_MIPs` - This directory contains the maximum intensity projections in three directions of the demons registered images.
 
 Please ensure to follow the steps correctly to avoid any issues during the registration process.
+
+## Dependency
+
+<details open>
+<summary> Package tool </summary>
+
+[CMTK 3.3.1](https://www.nitrc.org/projects/cmtk)
+
+</details>
