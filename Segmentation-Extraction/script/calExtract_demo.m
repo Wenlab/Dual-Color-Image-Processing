@@ -1,3 +1,5 @@
+%% Note: You must run the adpath.m script firstly, then run this code under Segmentation-Extraction path.
+
 %% Segment brain regions using Correlation Map method and extract the calcium trace.
 
 % set path.
