@@ -11,7 +11,7 @@ clear;
 
 %% 0. load a 3D image stack for visualization
 
-load('Fish-0107-sample2.mat');
+load('./DemoData/Fish-0107-sample2.mat');
 
   
 %% 1. Plot the comparison between dual-Ratio and the AF result
