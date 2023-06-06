@@ -139,7 +139,7 @@ write_flag = 1;
 
 % set the batchsize.
 batch_size = 1;
-[CalTrace,Coherence] = traceExtract(file_path,pre_name,value_name,seg_regions,water_corMap_filter,start_frame,batch_size,end_frame,write_flag);
+[CalTrace,Coherence] = traceExtract(file_path,pre_name,value_name,seg_regions,water_corMap_filter,info_data,start_frame,batch_size,end_frame,write_flag);
 disp('Second extraction done.');
 
 end

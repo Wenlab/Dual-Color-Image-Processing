@@ -21,7 +21,7 @@ function [seg_regions,water_corMap_filter] = coherenceFilter(file_path,Coherence
     water_corMap_filter = bwareaopen(water_corMap_filter,min_size,6);
     water_corMap_filter = uint16(bwlabeln(water_corMap_filter,6));
     num_components_keep3 = max(water_corMap_filter(:));
-    seg_regions = sparse(d1*d2*d3,1);
+    seg_regions = sparse(d1*d2*d3,num_components_keep3);
     for k=1:num_components_keep3
         temp  = (water_corMap_filter==k);
         seg_regions(:,k) = sparse(reshape(double(temp),[d1*d2*d3,1]));

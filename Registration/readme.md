@@ -1,3 +1,4 @@
+
 For Registration, do this in the following order under script path:
 
 1. regist_atlas.sh
@@ -10,9 +11,9 @@ For Registration, do this in the following order under script path:
 
 5. interp_run.m
 
-Or run the pepeline_demo.sh under script path.
+Or run the pipeline_demo.sh under script path.
 
-bash pepeline_demo.sh
+bash pipeline_demo.sh
 
 Then you will get some directories under data/G/regist_green and data/R/regist_red.
 
