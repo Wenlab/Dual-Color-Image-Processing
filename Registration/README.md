@@ -32,7 +32,7 @@ Please ensure to follow the steps correctly to avoid any issues during the regis
 ## Dependency
 
 <details open>
-<summary> Package tool </summary>
+<summary> Tool </summary>
 
 [CMTK 3.3.1](https://www.nitrc.org/projects/cmtk)
 
