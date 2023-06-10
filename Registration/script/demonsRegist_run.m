@@ -59,7 +59,7 @@ mode = 2;
 demonRegist(file_path_red,file_path_green,start_num,step_size_1,end_num,num_index,template_path_1,gpu_index);
 
 % mean the template.
-templateMean(file_path_template,num_index,false_num,mode);
+templateMean(file_path_template,num_index(start_num,step_size_1,end_num),false_num,mode);
 
 % demons registration for mean template.
 template_path_2 = fullfile(file_path_template,'mean_template.nii');
