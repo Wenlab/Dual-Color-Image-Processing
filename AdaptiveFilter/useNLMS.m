@@ -1,9 +1,20 @@
-function [AF, e, y]=useNLMS(sigR,sigG, extendfactor)
+function [AF, e, y]=useNLMS_2(sigR,sigG, extendfactor)
 
+sigG = newDenoise(sigG);
+sigR = newDenoise(sigR);
 % extend the signal
 L = length(sigG);
-sigR = padarray(sigR, [0 ceil(L*extendfactor)],'symmetric','pre' );
-sigG = padarray(sigG, [0 ceil(L*extendfactor)],'symmetric','pre');
+
+MM = mean(sigG);
+prefixSig(1:ceil(L*extendfactor)) = MM;
+prefixSig = awgn(prefixSig,1);
+sigG = [prefixSig sigG];
+
+MM1 = mean(sigR);
+prefixSig1(1:ceil(L*extendfactor)) = MM1;
+prefixSig1 = awgn(prefixSig1,1);
+sigR = [prefixSig1 sigR];
+
 
 [e,y,~] = myNLMS(sigR, sigG, 0.8, 2, -1e-3, -1e-4);
 
