@@ -20,7 +20,7 @@ load('./DemoData/Fish-0107-sample2.mat');
 % Adaptive Filter need a period time steps to converge, 
 % extend factor is the ratio of total signal length
 
-extend_factor = 0.05; 
+extend_factor = 0.2; 
 [AF, ~, ~] = useNLMS(sigR,sigG,extend_factor);
 
 
